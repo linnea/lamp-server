@@ -1,16 +1,16 @@
-<h1>Search Movies</h1>
-<form action="" method="GET">
-    <div class="form-group">
-        <input type="text" 
-            id="qInput" 
-            name="q"
-            class="form-control" 
-            value="<?= htmlentities($q) ?>"
-            placeholder="enter a movie title"
-            required
-            >
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary" type="submit">Get Movie</button>
-    </div>
-</form>
+<table class="table">
+    <th>Title</th>
+    <th>Release Date</th>
+    <th>Tickets Sold</th>
+    <th>Gross</th>
+    <?php foreach ($matches as $match): ?>
+        <tr>
+            <td><a href="/views/movie-view.php?id=<?= htmlentities($match['id'])?>"><?= htmlentities($match['title']) ?></a></td>
+            <td><?= htmlentities(date('d-M-Y', strtotime($match['released']))) ?></td>
+            <td><?= htmlentities(number_format($match['tickets'])) ?></td>
+            <td>$<?= htmlentities(number_format($match['gross'])) ?></td>
+        </tr>
+    <?php endforeach ?>
+</table>
+    
+

@@ -1,15 +1,12 @@
 <?php
-require 'models/model.php';
+// Make your model available
+include 'models/model.php';
+include 'connection.php';
 
-$data = new Model();
-$data->connect();
-$movies = $data->getAll();
-var_dump($movies);
-foreach($movies as $movie) {
-    echo "<h3>" .$movie['title']. " (ID: " .$movie['id']. ")</h3>";
-    echo "<p>";
-    echo "</p>";
-}
+$conn = getConnection();
+$model = new Model($conn);
+$q = $_GET['q'];
+$matches = $model->search($q);
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +14,16 @@ foreach($movies as $movie) {
 <head>
     <meta charset="UTF-8">
     <title>Movie Database</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
 </head>
 <body>
-
+    <div class="container">
+    <?php 
+    include 'views/search.php';
+    include 'views/list.php';
+    ?>
+    
+    GITHUB REPO HERE
+    </div>
 </body>
 </html>
