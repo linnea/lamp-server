@@ -1,3 +1,4 @@
+-- loads data from csv file
 load data infile 'lamp-server/data/movies-2014.csv'
 into table movies
 fields terminated by ','

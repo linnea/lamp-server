@@ -1,5 +1,7 @@
+-- creates the database
 create database movies;
 
+-- creates the table to fill
 create table movies (
 	id int not null auto_increment primary key,
     title varchar(100),    
@@ -13,4 +15,5 @@ create table movies (
     index(id)
 );
 
+-- selects the database
 use movies;

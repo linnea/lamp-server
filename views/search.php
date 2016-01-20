@@ -1,15 +1,15 @@
-<h1>Search Movies</h1>
+<!-- A view that lets the user search the movies -->
+<h4>Search Movies:</h4>
 <form action="" method="GET">
-    <div class="form-group">
+    <div class="form-group input-group custom-search-form">
         <input type="text" 
             id="qInput" 
             name="q"
             class="form-control" 
             value="<?= htmlentities($q) ?>"
-            placeholder="enter a title"
+            placeholder="Enter a title..."
             >
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary" type="submit">Search</button>
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">Search</button>
     </div>
 </form>
