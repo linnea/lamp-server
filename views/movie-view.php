@@ -44,7 +44,7 @@ $result = json_decode($json); // decode the json object
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
-                             <a class="btn btn-primary" href="index.php">Back</a></button>   
+                             <a class="btn btn-primary" href="/lamp-server/index.php">Back</a></button>   
                         </li>
                        
                     </ul>
