@@ -23,7 +23,7 @@ $matches = $model->search($q);
     include 'views/list.php';
     ?>
     
-    GITHUB REPO HERE
+    <a href="https://github.com/linneakw/lamp-server"><img src="">GitHub Repository</a>
     </div>
 </body>
 </html>
